@@ -13,12 +13,16 @@ var Clock = setInterval(function() {
 }, 1000);
 
 
+var testvar = document.getElementById("iframeid").contentWindow.testvar;
+document.getElementById("testvar").innerHTML = "Test var: " + testvar;
+
 </script>
 
-<h3>Main page: v0.0.03</h3>
-<iframe src="https://jaabsaxo.github.io/implicit-flow-test/" title="i frame page">
+<h3>Main page: v0.0.04</h3>
+<iframe id="iframeid" src="https://jaabsaxo.github.io/implicit-flow-test/">
 </iframe>
 <p id="TotalTime"></p>
+<p id="testvar"></p>
 
 </body>
 </html>
