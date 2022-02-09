@@ -13,7 +13,7 @@ var Clock = setInterval(function() {
 }, 1000);
 
 
-var a = document.getElementById("iframeid")[0].contentWindow.a;
+var a = document.getElementById("iframeid").contentWindow.document.a;
 document.getElementById("a").innerHTML = "Test var: " + a;
 
 </script>
