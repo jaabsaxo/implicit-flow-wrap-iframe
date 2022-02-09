@@ -12,21 +12,36 @@ var Clock = setInterval(function() {
     document.getElementById("TotalTime").innerHTML = "Total Runtime: " + TotalTime;
 }, 1000);
 
+function login() {
+  const client_id = "add82f2f69d340249024017f2194adac";
+  const stateString = "State" + Math.random().toString();
+  const redirectUrl = "https://jaabsaxo.github.io/implicit-flow-test/";
+  const url = "https://sim.logonvalidation.net/authorize?response_type=token&client_id="+client_id+"&state="+stateString+"&redirect_uri="+redirectUrl;
+
+  const options = {
+    method: 'GET',
+    mode: 'no-cors',
+    redirect: 'follow'
+  };
+  console.log("log in..");
+  window.open(url, '_self');
+}
 
 window.addEventListener("message", (event) => {
   console.log("message received", event.data);
 }, false);
 
 
-document.getElementById("a").innerHTML = "Test var: ";
+var accessToken = "";
 
 </script>
 
-<h3>Main page: v0.0.05</h3>
+<h3>Main page: v0.0.06</h3>
 <iframe id="iframeid" src="https://jaabsaxo.github.io/implicit-flow-test/">
 </iframe>
+
+<button onclick="login()">Login</button>
 <p id="TotalTime"></p>
-<p id="a"></p>
 
 </body>
 </html>
