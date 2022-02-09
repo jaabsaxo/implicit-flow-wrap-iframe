@@ -5,11 +5,20 @@
 <body>
 
 <script type="text/javascript">
+
+var TotalTime = 0;
+var Clock = setInterval(function() {
+    TotalTime = TotalTime + 1;
+    document.getElementById("TotalTime").innerHTML = "Total Runtime: " + TotalTime;
+}, 1000);
+
+
 </script>
 
-<h3>Main page: v0.0.02</h3>
+<h3>Main page: v0.0.03</h3>
 <iframe src="https://jaabsaxo.github.io/implicit-flow-test/" title="i frame page">
 </iframe>
+<p id="TotalTime"></p>
 
 </body>
 </html>
