@@ -15,7 +15,7 @@ var Clock = setInterval(function() {
 function login() {
   const client_id = "add82f2f69d340249024017f2194adac";
   const stateString = "State" + Math.random().toString();
-  const redirectUrl = "https://jaabsaxo.github.io/implicit-flow-test/";
+  const redirectUrl = "https://jaabsaxo.github.io/implicit-flow-wrap-iframe/";
   const url = "https://sim.logonvalidation.net/authorize?response_type=token&client_id="+client_id+"&state="+stateString+"&redirect_uri="+redirectUrl;
 
   const options = {
@@ -36,7 +36,7 @@ var accessToken = "";
 
 </script>
 
-<h3>Main page: v0.0.06</h3>
+<h3>Main page: v0.0.7</h3>
 <iframe id="iframeid" src="https://jaabsaxo.github.io/implicit-flow-test/">
 </iframe>
 
